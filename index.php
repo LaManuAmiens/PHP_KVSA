@@ -7,13 +7,13 @@ $xml = simplexml_load_file("source.xml") or die("Error: Cannot create object");
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="assets/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="assets/css/style.css" rel="stylesheet">
   <title>OCORDO KVSA</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
-  <a class="nav-item nav-link" id='logoAccueil'>OCORDO</a>
+  <a class="nav-item nav-link" id='logoAccueil'><img src="assets/img/logo.png" width="70" height="83" alt="logo"/></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -39,3 +39,7 @@ $xml = simplexml_load_file("source.xml") or die("Error: Cannot create object");
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+
+

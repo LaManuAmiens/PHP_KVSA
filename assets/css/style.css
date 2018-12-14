@@ -1,6 +1,14 @@
-body{
-    background-color: #d3bcbc;
+a:hover{
+color : #76877d;
 }
 .navbar{
-    background-color:  #aa3333;
+    background-color:  #670502;
+    height : 100px;
+}
+#logoAccueil, .nav-item{
+    color : #d9cfc1;
+    text-decoration: none !important;
+}
+.img{
+     background-color:  #670502;
 }
