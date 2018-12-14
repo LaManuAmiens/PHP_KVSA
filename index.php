@@ -8,11 +8,11 @@ $xml = simplexml_load_file("source.xml") or die("Error: Cannot create object");
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="assets/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <title>OCORDO KVSA</title>
+  <title><?= $xml->page[intval($_GET['id'])-1]->title;  ?></title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
-  <a class="nav-item nav-link" href="#">OCORDO</a>
+  <a class="navbar-brand">OCORDO</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -31,10 +31,9 @@ $xml = simplexml_load_file("source.xml") or die("Error: Cannot create object");
   </div>
 </nav>
 
-<!--Grace a foreach je parcours  le tableau $xml vers l'index 0 (= 1 dans le tableau) vers <content> = je recupere son contenu
-$xml-> page-> content EST LA DIRECTION QUE MA BOUCLE DOIT SUIVRE
-Je fais apparaitre sur ma page index.php $value (contenu de <content>)-->
-    <?php echo $xml->page[intval($_GET['id'])-1]->content; ?>
+
+    <?= $xml->page[intval($_GET['id'])-1]->content;  ?>
+    
 
 
     
