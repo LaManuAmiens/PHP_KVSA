@@ -1,3 +1,4 @@
+
 a:hover{
 color : #76877d;
 }
@@ -7,8 +8,18 @@ color : #76877d;
 }
 #logoAccueil, .nav-item{
     color : #d9cfc1;
+    font-family: verdana;
     text-decoration: none !important;
 }
-.img{
-     background-color:  #670502;
+
+p{
+    font-family: verdana;
+}
+
+h1{
+    text-align: center;
+    color: #76877d !important;
+    font-size: 10vh !important;
+    margin-top: 2% !important;
+    margin-bottom: 2% !important;
 }
