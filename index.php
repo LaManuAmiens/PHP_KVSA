@@ -1,3 +1,4 @@
+
 <!--simplexml_load_file — Convertit un fichier XML en objet-->
 <?php
 $xml = simplexml_load_file("source.xml") or die("Error: Cannot create object");
