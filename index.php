@@ -1,3 +1,7 @@
+<!--Permet de lier mon xml à index.php-->
+<?php
+$xml=simplexml_load_file("source.xml") or die("Error: Cannot create object");
+?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -7,16 +11,35 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <title>OCORDO KVSA</title>
 </head>
-
-Khoursa
-
-Valentin
-
-Stephane
-
-Aline
-
 <body>
+    <nav class="navbar navbar-expand-lg">
+  <a class="nav-item nav-link" href="#">OCORDO</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+        <?php
+//Grace a foreach je parcours le tableau $xml vers <page> = je recupere son contenu
+        foreach ($xml->page as $pageContent) {
+            ?>
+<!--J'affiche <menu> de chaque page dans ma Navbar-->            
+<a class="nav-item nav-link" href="#"><?= $pageContent->menu ?></a>
+            <?php
+        }
+      ?>
+  </div>
+  </div>
+</nav>
+<?php 
+//Grace a foreach je parcours  le tableau $xml vers l'index 0 (= 1 dans le tableau) vers <content> = je recupere son contenu
+//$xml-> page-> content EST LA DIRECTION QUE MA BOUCLE DOIT SUIVRE
+foreach($xml->page[0]->content as $value){ ?>
+    <li>
+<!--Je fais apparaitre sur ma page index.php $value (contenu de <content>)-->
+    <?php echo $value; ?>
+    </li>
+    <?php } ?>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
