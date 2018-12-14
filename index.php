@@ -34,7 +34,6 @@ $xml = simplexml_load_file("source.xml") or die("Error: Cannot create object");
 <!--Grace a foreach je parcours  le tableau $xml vers l'index 0 (= 1 dans le tableau) vers <content> = je recupere son contenu
 $xml-> page-> content EST LA DIRECTION QUE MA BOUCLE DOIT SUIVRE
 Je fais apparaitre sur ma page index.php $value (contenu de <content>)-->
-    <?php echo $_GET['id']; ?>
     <?php echo $xml->page[intval($_GET['id'])-1]->content; ?>
 
 
