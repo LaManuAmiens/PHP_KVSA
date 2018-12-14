@@ -1,3 +1,4 @@
+<!--simplexml_load_file — Convertit un fichier XML en objet-->
 <?php
 $xml = simplexml_load_file("source.xml") or die("Error: Cannot create object");
 ?>
@@ -12,17 +13,17 @@ $xml = simplexml_load_file("source.xml") or die("Error: Cannot create object");
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
-  <a class="nav-item nav-link" href="#">OCORDO</a>
+  <a class="nav-item nav-link" id='logoAccueil'>OCORDO</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
         <?php
-//Grace a foreach je parcours le tableau $xml vers <page> = je recupere son contenu
+//Grace a foreach je parcours le tableau $xml vers <page> = je recupere son contenu qui correspond à $pageContent
         foreach ($xml->page as $pageContent) {
             ?>
-<!--J'affiche <menu> de chaque page dans ma Navbar-->            
+<!--J'affiche l'attribut de $pageContent qui correspond aux Id de xml -->            
 <a class="nav-item nav-link" href="?id=<?= $pageContent->attributes() ?>.html"><?= $pageContent->menu ?></a>
             <?php
         }
@@ -30,14 +31,8 @@ $xml = simplexml_load_file("source.xml") or die("Error: Cannot create object");
   </div>
   </div>
 </nav>
-
-<!--Grace a foreach je parcours  le tableau $xml vers l'index 0 (= 1 dans le tableau) vers <content> = je recupere son contenu
-$xml-> page-> content EST LA DIRECTION QUE MA BOUCLE DOIT SUIVRE
-Je fais apparaitre sur ma page index.php $value (contenu de <content>)-->
+<!--Le id est un attribut de la page donc je recupere l'attribut-->
     <?php echo $xml->page[intval($_GET['id'])-1]->content; ?>
-
-
-    
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
