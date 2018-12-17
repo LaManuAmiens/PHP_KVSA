@@ -2,7 +2,7 @@
 a:hover{
 color : #76877d;
 }
-.navbar{
+.navbar navbar-expand-lg{
     background-color:  #670502;
     height : 100px;
 }
