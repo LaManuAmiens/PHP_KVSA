@@ -1,4 +1,3 @@
-
 <!--simplexml_load_file — Convertit un fichier XML en objet-->
 <?php
 $xml = simplexml_load_file("source.xml") or die("Error: Cannot create object");
@@ -9,14 +8,16 @@ $xml = simplexml_load_file("source.xml") or die("Error: Cannot create object");
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="assets/css/style.css" rel="stylesheet">
+<!--    Dans ce titre, j'echo le titre se trouvant: : sur la page xml -> dans la balise page , correspondant aux  données de (id="x") se trouvant dans sa balise title-->
   <title><?= $xml->page[intval($_GET['id'])-1]->title; ?></title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
   <a class="nav-item nav-link" id='logoAccueil'><img src="assets/img/logo.png" width="70" height="83" alt="logo"/></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon">&#9776;</span>
     </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <div class="navbar-nav">
@@ -32,7 +33,7 @@ $xml = simplexml_load_file("source.xml") or die("Error: Cannot create object");
   </div>
   </div>
 </nav>
-<!--Le id est un attribut de la page donc je recupere l'attribut-->
+<!--j'echo le contenu se trouvant: : sur la page xml -> dans la balise page , correspondant aux données de (id="x") se trouvant dans sa balise content-->
     <?= $xml->page[intval($_GET['id'])-1]->content; ?>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -8,10 +8,7 @@ color : #76877d;
     background-color:  #670502;
     height : 100px;
 }
-.collapse{
-    color: #670502;
-}
-#logoAccueil, .nav-item{
+.nav-item{
     color : #d9cfc1;
     font-family: verdana;
     text-decoration: none !important;
@@ -34,7 +31,6 @@ h2{
 }
 .img-thumbnail{
 display: inline-block !important;
-  display: table-cell;
 }
 .caption-text{
     font-size: 70%;
