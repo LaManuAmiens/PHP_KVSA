@@ -22,8 +22,9 @@ $xml = simplexml_load_file("source.xml") or die("Error: Cannot create object");
         <?php
 //Grace a foreach je parcours le tableau $xml vers <page> = je recupere son contenu
         foreach ($xml->page as $pageContent) {
-            ?>    
-<a class="nav-item nav-link" href="?id=<?= $pageContent->attributes() ?>.html"><?= $pageContent->menu ?></a>
+            ?>
+<!--J'affiche l'attribut de $pageContent qui correspond aux Id de xml -->            
+<a class="nav-item nav-link" href="<?= $pageContent->attributes() ?>.html"><?= $pageContent->menu ?></a>
             <?php
         }
       ?>

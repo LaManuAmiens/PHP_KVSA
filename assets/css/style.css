@@ -1,7 +1,7 @@
 a:hover{
 color : #76877d;
 }
-.navbar{
+.navbar navbar-expand-lg{
     background-color:  #670502;
     height : 100px;
 }
@@ -21,4 +21,7 @@ h1{
     font-size: 10vh !important;
     margin-top: 2% !important;
     margin-bottom: 2% !important;
+}
+.img-thumbnail{
+    display:inline-block;
 }

@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>index.php</url>
+            <bookmark id="1">
+                <name/>
+                <line>25</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/home/stephane/www/Ocordo/PHP_KVSA/source.xml</file>
             <file>file:/home/stephane/www/Ocordo/PHP_KVSA/index.php</file>
             <file>file:/home/stephane/www/Ocordo/PHP_KVSA/assets/css/style.css</file>
+=======
+            <file>file:/home/aline/Documents/Projet/ocordo/chemin.php</file>
+            <file>file:/home/aline/Documents/Projet/ocordo/assets/css/style.css</file>
+            <file>file:/home/aline/Documents/Projet/ocordo/index.php</file>
+            <file>file:/home/aline/Documents/Projet/ocordo/.htaccess</file>
+            <file>file:/home/aline/Documents/Projet/ocordo/source.xml</file>
+>>>>>>> 7e370290361b8b44644f458a00f3d1924f20ede4
         </group>
     </open-files>
 </project-private>
