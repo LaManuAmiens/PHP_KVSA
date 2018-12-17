@@ -4,3 +4,4 @@ Options +FollowSymlinks
 RewriteEngine On
 #
 RewriteRule ^([0-9]+)\.html$ ?id=$1.html [L] 
+

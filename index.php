@@ -1,6 +1,11 @@
 <!--simplexml_load_file — Convertit un fichier XML en objet-->
 <?php
 $xml = simplexml_load_file("source.xml") or die("Error: Cannot create object");
+if (isset($_GET['id'])){
+    $page = intval($_GET['id'])-1;
+}else{
+    $page = 0;
+}
 ?>
 <!doctype html>
 <html lang="fr">
@@ -11,7 +16,7 @@ $xml = simplexml_load_file("source.xml") or die("Error: Cannot create object");
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="assets/css/style.css" rel="stylesheet">
 <!--    Dans ce titre, j'echo le titre se trouvant: : sur la page xml -> dans la balise page , correspondant aux  données de (id="x") se trouvant dans sa balise title-->
-  <title><?= $xml->page[intval($_GET['id'])-1]->title; ?></title>
+  <title><?= $xml->page[$page]->title; ?></title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
@@ -33,7 +38,7 @@ $xml = simplexml_load_file("source.xml") or die("Error: Cannot create object");
 </nav>
     
 <!--j'echo le contenu se trouvant: : sur la page xml -> dans la balise page , correspondant aux données de (id="x") se trouvant dans sa balise content-->
-    <?= $xml->page[intval($_GET['id'])-1]->content; ?>
+    <?= $xml->page[$page]->content; ?>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
