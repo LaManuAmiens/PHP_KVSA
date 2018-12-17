@@ -15,13 +15,12 @@ $xml = simplexml_load_file("source.xml") or die("Error: Cannot create object");
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
-  <a class="nav-item nav-link" id='logoAccueil'><img src="assets/img/logo.png" width="70" height="83" alt="logo"/></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon">&#9776;</span>
-    </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <div class="navbar-nav">
-        <?php
+  <a class="navbar-brand"><img src="assets/img/logo.png" width="70" height="83" alt="logo"/></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon">&#9776;</span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <?php
 //Grace a foreach je parcours le tableau $xml vers <page> = je recupere son contenu qui correspond à $pageContent
         foreach ($xml->page as $pageContent) {
             ?>
@@ -31,8 +30,8 @@ $xml = simplexml_load_file("source.xml") or die("Error: Cannot create object");
         }
       ?>
   </div>
-  </div>
 </nav>
+    
 <!--j'echo le contenu se trouvant: : sur la page xml -> dans la balise page , correspondant aux données de (id="x") se trouvant dans sa balise content-->
     <?= $xml->page[intval($_GET['id'])-1]->content; ?>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>

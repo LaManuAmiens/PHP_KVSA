@@ -6,18 +6,15 @@ color : #76877d;
 }
 .navbar{
     background-color:  #670502;
-    height : 100px;
 }
 .nav-item{
     color : #d9cfc1;
     font-family: verdana;
     text-decoration: none !important;
 }
-
 p{
     font-family: verdana;
 }
-
 h1{
     text-align: center;
     color: #670502 !important;
