@@ -17,11 +17,9 @@ color : #76877d;
     font-family: verdana;
     text-decoration: none !important;
 }
-
 p{
     font-family: verdana;
 }
-
 h1{
     text-align: center;
     color: #76877d !important;
@@ -29,8 +27,7 @@ h1{
     font-size: 10vh !important;
     margin-top: 2% !important;
     margin-bottom: 2% !important;
-}
-    
+}  
 h2{
     text-align: center;
     color: #76877d!important;
