@@ -45,3 +45,6 @@ display: inline-block !important;
 .form{
     width: 50%;
 }
+li{
+    margin-left: 5%;
+}
