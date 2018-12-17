@@ -1,7 +1,9 @@
+#Si le module est bien activé tu executes le .htaccess sinon tu n'executes pas
+<IfModule mod_rewrite.c>
 #Le serveur est autorisé à suivre les liens symboliques dans ce répertoire, donc nécessaire pour l' URL Rewriting. 
 Options +FollowSymlinks
 #Permet d'activer grace à "on" la manupilation des URL
 RewriteEngine On
 #Je donne le format de réécriture de l'URL
 RewriteRule ^([0-9]+)\.html$ ?id=$1.html [L] 
-
+</IfModule>
