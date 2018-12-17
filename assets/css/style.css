@@ -1,7 +1,10 @@
+body{
+    background-color: #d9cfc1;
+}
 a:hover{
 color : #76877d;
 }
-.navbar navbar-expand-lg{
+.navbar navbar{
     background-color:  #670502;
     height : 100px;
 }
@@ -17,11 +20,27 @@ p{
 
 h1{
     text-align: center;
-    color: #76877d !important;
+    color: #670502 !important;
     font-size: 10vh !important;
     margin-top: 2% !important;
     margin-bottom: 2% !important;
 }
+h2{
+    text-align: center;
+    color: #76877d!important;
+}
 .img-thumbnail{
-    display:inline-block;
+display: inline-block !important;
+}
+.caption-text{
+    font-size: 70%;
+}
+#video{
+  text-align: center;
+}
+.form{
+    width: 50%;
+}
+li{
+    margin-left: 5%;
 }

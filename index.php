@@ -8,27 +8,28 @@ $xml = simplexml_load_file("source.xml") or die("Error: Cannot create object");
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="assets/css/style.css" rel="stylesheet">
   <title><?= $xml->page[intval($_GET['id'])-1]->title; ?></title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-  <a class="nav-item nav-link" id='logoAccueil'><img src="assets/img/logo.png" width="70" height="83" alt="logo"/></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
+   <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" id='logoAccueil'><img src="assets/img/logo.png" width="70" height="83" alt="logo"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">&#9776;</span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav">
         <?php
 //Grace a foreach je parcours le tableau $xml vers <page> = je recupere son contenu
-        foreach ($xml->page as $pageContent) {
-            ?>
+            foreach ($xml->page as $pageContent) {
+        ?>
 <!--J'affiche l'attribut de $pageContent qui correspond aux Id de xml -->            
-<a class="nav-item nav-link" href="<?= $pageContent->attributes() ?>.html"><?= $pageContent->menu ?></a>
-            <?php
+      <a class="nav-item nav-link" href="<?= $pageContent->attributes() ?>.html"><?= $pageContent->menu ?></a>
+          <?php
         }
       ?>
-  </div>
+      </div>
   </div>
 </nav>
     <?= $xml->page[intval($_GET['id'])-1]->content;  ?>
